@@ -4,7 +4,7 @@
 ; Run through the sequence of states for a single traffic light;
 ; time delay between each state transition.
 ;
-; Run the state sequence once:
+; Run the state sequence once: 
 ; (runIt stateSequence)
 
 ; Or run forever
