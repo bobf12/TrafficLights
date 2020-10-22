@@ -2,8 +2,8 @@
 Block 1 project sample files
 ----------------------------
 
-**TrafficLinear.rkt**. Simple linear sequence, with a fixed time gap between transitions. To run do either:
-`(runIt stateSequence)` - run through the sequence once, then stop.
+**TrafficLinear.rkt**. Simple linear sequence, with a fixed time gap between transitions. To run, do either:
+`(runIt stateSequence)` - run through the sequence once, then stop - or 
 `(runIt-continuous stateSequence)` - keeps one repeating the sequence forever.
 
 **TrafficFSM.rkt** FSM-based version with two events “n” and “r” (for next - move on through the sequence, and reset - go back to the beginning).
@@ -13,9 +13,9 @@ To run:
 Or
 `(run-interactive 1 stateTable)` - interactive version type event names (followed by enter), one at a time.
 
-**TrafficFSM-GUI.rkt** same as the other FSM one, but driven by a simple GUI (needs the two ASIP files too).
+**TrafficFSM-GUI.rkt** same as the other FSM one, but driven by a simple GUI (needs the two required ASIP files too).
 To run:
-`(startup)` starts the GUI. Button 1 generates an “n” event, Button 2, an “r”.
+`(startup)` starts the GUI. Button 1 generates an “n” event, Button 2, an “r”. 
 
 **TrafficFSM-GUI-timed.rkt** - adds timed transitions - transitions that are taken from a state a specified time after entering that state.
 
