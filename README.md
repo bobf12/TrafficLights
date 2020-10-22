@@ -9,7 +9,7 @@ Block 1 project sample files
 **TrafficFSM.rkt** FSM-based version with two events “n” and “r” (for next - move on through the sequence, and reset - go back to the beginning).
 FSM transition relation is represented using lists.
 To run:
-`(run 1 (list "n" "r") stateTable)` - i.e. by profiding a list of events as the second parameter.
+`(run 1 (list "n" "r") stateTable)` - i.e. by providing a list of events as the second parameter.
 Or
 `(run-interactive 1 stateTable)` - interactive version type event names (followed by enter), one at a time.
 
