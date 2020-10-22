@@ -32,5 +32,6 @@ The FSM variants use a representation of state transitions using lists - _List (
 
 For timed state transitions, numbers, representing time delay in seconds, are used as event names. E.g:
 > (1 ((2 3) ("b" 2)))
+
 is interpreted as a transition from state 1 to state 3 that happens 2 seconds after entering state 1, 
 if the machine is still in state 1 at that time (an event "b" could have caused a transition to state 2 in the meantime).
