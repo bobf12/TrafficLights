@@ -1,6 +1,6 @@
 # TrafficLights
 Block 1 project sample files
-============================
+----------------------------
 
 **TrafficLinear.rkt**. Simple linear sequence, with a fixed time gap between transitions. To run do either:
 `(runIt stateSequence)` - run through the sequence once, then stop.
