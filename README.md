@@ -31,8 +31,8 @@ The FSM variants use a representation of state transitions using lists - _List (
     ) )  
 
 
-For timed state transitions, numbers, representing time delay in seconds, are used as event names. E.g, an element in the transition table:
-> (1 ( ("b" 2) (2 3) ))
+For timed state transitions, numbers, representing time delay in seconds, are used as event names. E.g, an element in the transition table:  
+    (1 ( ("b" 2) (2 3) ))  
 
 is interpreted as meaning there are two transitions from state 1: one triggered by event "b" to state 2, and one to state 3 that happens 2 seconds after entering state 1, 
 if the machine is still in state 1 at that time (an "b" event could have caused a transition to state 2 in the meantime).
