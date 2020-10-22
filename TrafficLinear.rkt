@@ -15,15 +15,18 @@
 
 (define stateSequence (list 1 2 3 4) )
 
-; Output function: Num -> String - output for a given state number
+
+; Output function: Num -> Void - produce output for a given state number
 (define outputState
   (λ (s)
+   (println 
     (cond
       ((equal? s 1) "Red")
       ((equal? s 2) "Red+Amber")
       ((equal? s 3) "Green")
       ((equal? s 4) "Amber")
       )
+    )
     )
   )
 
@@ -32,7 +35,7 @@
 (define runIt (λ (seq)
                 (cond
                   ((empty? seq) "Done")
-                  (#t (println (outputState (first seq)))
+                  (#t (outputState (first seq))
                       (sleep 1)
                       (runIt (rest seq)))
                   )))
@@ -43,7 +46,7 @@
 (define runIt_continuous (λ (seq)
                            (cond
                              ((empty? seq) "Done")
-                             (#t (println (outputState (first seq)))
+                             (#t (outputState (first seq))
                                  (sleep 1)
                                  ; Move the 'current' state to the end of the list:
                                  (runIt_continuous (append (rest seq) (list (first seq)))))

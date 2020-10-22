@@ -1,6 +1,8 @@
 #lang racket
 
 ; Traffic Light simulation with state transition table. 
+;
+; adds timed transitions.
 ; 
 
 ;; Works in 'batch' mode by providing a list of states:
@@ -34,26 +36,6 @@
                          )
                        )
   )
-
-(define nextState2 (λ (st ev sTab)
-                     ; trs is the list of transitions from state st.
-                     ; i.e. a StateNum x List(EventName x StateNum)
-                     ; where the first element = st.
-                     (let ((trs (findf (λ (el) (equal? (first el) st)) sTab)))
-                       (cond
-                         ((not trs) #f)
-                         (#t (let ((t (findf (λ (tr) (equal? (first tr) ev)) (second  trs)))
-
-                                   )
-                               (cond
-                                 ((not t) #f)
-                                 (#t (second t))
-                                 )
-                               )
-                             )
-                         )
-                       )                       
-                     ))
 
 
 (define nextState (λ (st ev sTab)
