@@ -25,9 +25,13 @@ State Transition Table
 The FSM variants use a representation of state transitions using lists - _List (StateNum x List (EventName x StateNum)_. E.g.
 
 >(define stateTable
->  '(
->    (1 (("a" 1) ("b" 2)))
->    (2 (("a" 2) ("b" 1)))
+>
+>     '(
+>
+>        (1 (("a" 1) ("b" 2)))
+>
+>        (2 (("a" 2) ("b" 1)))
+>
 >    ) )
 
 For timed state transitions, numbers, representing time delay in seconds, are used as event names. E.g, an element in the transition table:
